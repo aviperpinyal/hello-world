@@ -1,0 +1,6 @@
+services:
+  hello-app:
+    build: .
+    ports:
+      - "10001:80"  # This is the "Magic Mapping" line
+    restart: always
