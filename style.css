@@ -5,7 +5,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
 }
 
@@ -15,54 +15,64 @@ main {
     border-radius: 12px;
     box-shadow: 0 8px 32px rgba(0,0,0,0.1);
     text-align: center;
+    width: 90%;
+    max-width: 800px;
 }
 
 h1 {
-    font-size: 48px;
+    font-size: 36px;
     margin-bottom: 2rem;
-    transition: all 0.2s ease-in-out;
+    color: #007aff;
+}
+
+.clock-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.clock {
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    transition: transform 0.2s;
+}
+
+.clock:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.city {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+.time {
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 0.3rem;
+    color: #000;
+}
+
+.date {
+    font-size: 0.9rem;
+    color: #888;
 }
 
 .controls {
-    display: grid;
-    gap: 1.5rem;
-    min-width: 400px;
-}
-
-.control-group {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    align-items: center;
-    gap: 1rem;
-    text-align: left;
-}
-
-.control-group.surprise {
-    border-top: 1px solid #e0e0e0;
-    padding-top: 1.5rem;
-}
-
-
-label {
-    font-weight: 500;
-}
-
-input[type="range"] {
-    width: 100%;
-}
-
-input[type="color"] {
-    width: 100%;
-    height: 40px;
-    border: none;
-    background: none;
-    cursor: pointer;
+    margin-top: 1rem;
 }
 
 button {
-    padding: 0.75rem 1rem;
+    padding: 0.75rem 1.5rem;
     border: none;
-    background-color: #007aff;
+    background-color: #6c757d;
     color: white;
     border-radius: 8px;
     cursor: pointer;
@@ -71,17 +81,5 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
-}
-
-#resetBtn {
-    background-color: #6c757d;
-}
-
-#resetBtn:hover {
     background-color: #5a6268;
-}
-
-#size-value {
-    font-variant-numeric: tabular-nums;
 }

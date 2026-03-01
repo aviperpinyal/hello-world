@@ -3,43 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Majordomo's Control Panel</title>
+    <title>Majordomo's World Clock</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <main>
-        <h1 id="greeting">Hello, World. Thanks for the fish.!</h1>
+        <h1 id="greeting">World Clocks</h1>
+        <div class="clock-container">
+            <div class="clock" id="clock-chicago">
+                <div class="city">Chicago</div>
+                <div class="time">--:--:--</div>
+                <div class="date">-- --- ----</div>
+            </div>
+            <div class="clock" id="clock-london">
+                <div class="city">London</div>
+                <div class="time">--:--:--</div>
+                <div class="date">-- --- ----</div>
+            </div>
+            <div class="clock" id="clock-tel-aviv">
+                <div class="city">Tel Aviv</div>
+                <div class="time">--:--:--</div>
+                <div class="date">-- --- ----</div>
+            </div>
+            <div class="clock" id="clock-johannesburg">
+                <div class="city">Johannesburg</div>
+                <div class="time">--:--:--</div>
+                <div class="date">-- --- ----</div>
+            </div>
+            <div class="clock" id="clock-sydney">
+                <div class="city">Sydney</div>
+                <div class="time">--:--:--</div>
+                <div class="date">-- --- ----</div>
+            </div>
+        </div>
         <div class="controls">
-            <div class="control-group">
-                <button id="changeTextBtn">Change Greeting</button>
-                <button id="resetBtn">Reset</button>
-            </div>
-
-            <div class="control-group">
-                <label for="size-slider">Font Size</label>
-                <input type="range" id="size-slider" min="24" max="128" value="48">
-                <span id="size-value">48px</span>
-            </div>
-
-            <div class="control-group">
-                <label for="red-slider">Red</label>
-                <input type="range" class="color-slider" id="red-slider" min="0" max="255" value="51">
-            </div>
-
-            <div class="control-group">
-                <label for="green-slider">Green</label>
-                <input type="range" class="color-slider" id="green-slider" min="0" max="255" value="51">
-            </div>
-
-            <div class="control-group">
-                <label for="blue-slider">Blue</label>
-                <input type="range" class="color-slider" id="blue-slider" min="0" max="255" value="51">
-            </div>
-
-            <div class="control-group surprise">
-                <label for="color-picker">Surprise Color Picker</label>
-                <input type="color" id="color-picker" value="#333333">
-            </div>
+            <button id="resetBtn">Refresh Layout</button>
         </div>
     </main>
     <script src="script.js"></script>
